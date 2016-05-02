@@ -1,0 +1,1010 @@
+### Naive Bayes ###
+
+# Stand-alone
+High Correlation Features
+cc: 0.77 | Prec: 0.24 | Recall: 0.23 | F1: 0.23 | F2: 0.23
+### GridSearchCV Best Parameters
+100 {}
+
+All original features
+Acc: 0.70 | Prec: 0.20 | Recall: 0.41 | F1: 0.27 | F2: 0.34
+### GridSearchCV Best Parameters
+100 {}
+
+All features + new
+Acc: 0.70 | Prec: 0.20 | Recall: 0.41 | F1: 0.27 | F2: 0.34
+### GridSearchCV Best Parameters
+100 {}
+
+
+# With PCA
+High correlation features
+Acc: 0.86 | Prec: 0.60 | Recall: 0.28 | F1: 0.38 | F2: 0.31
+### GridSearchCV Best Parameters
+91 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+
+All orginal features
+Acc: 0.88 | Prec: 0.58 | Recall: 0.33 | F1: 0.42 | F2: 0.36
+### GridSearchCV Best Parameters
+100 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+
+All featurs + news
+Acc: 0.88 | Prec: 0.57 | Recall: 0.33 | F1: 0.42 | F2: 0.36
+### GridSearchCV Best Parameters
+85 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+8 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false}
+7 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false}
+
+
+# With SelectKbest
+High correlation features
+Acc: 0.76 | Prec: 0.23 | Recall: 0.22 | F1: 0.22 | F2: 0.22
+### GridSearchCV Best Parameters
+93 {"kbest__k": 4}
+7 {"kbest__k": 2}
+
+All orginal features
+Acc: 0.76 | Prec: 0.22 | Recall: 0.30 | F1: 0.25 | F2: 0.28
+### GridSearchCV Best Parameters
+38 {"kbest__k": 18}
+28 {"kbest__k": 16}
+14 {"kbest__k": 14}
+9 {"kbest__k": 12}
+6 {"kbest__k": 10}
+3 {"kbest__k": 8}
+1 {"kbest__k": 6}
+1 {"kbest__k": 4}
+
+All featurs + news
+Acc: 0.76 | Prec: 0.23 | Recall: 0.34 | F1: 0.27 | F2: 0.31
+### GridSearchCV Best Parameters
+38 {"kbest__k": 20}
+31 {"kbest__k": 17}
+18 {"kbest__k": 14}
+6 {"kbest__k": 5}
+4 {"kbest__k": 11}
+3 {"kbest__k": 8}
+
+
+
+
+
+
+
+
+### Decision Tree ###
+
+# Stand-alone
+High correlation feature set
+Acc: 0.80 | Prec: 0.33 | Recall: 0.30 | F1: 0.31 | F2: 0.31
+### GridSearchCV Best Parameters
+17 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+16 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+13 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+11 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+7 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+7 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+6 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+6 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+5 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+4 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+4 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+4 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+
+All orginal features
+Acc: 0.81 | Prec: 0.24 | Recall: 0.21 | F1: 0.23 | F2: 0.22
+### GridSearchCV Best Parameters
+17 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+13 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+11 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+11 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+10 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+10 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+9 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+8 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+4 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+3 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+3 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+
+All featurs + news
+Acc: 0.83 | Prec: 0.35 | Recall: 0.30 | F1: 0.32 | F2: 0.31
+### GridSearchCV Best Parameters
+12 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+12 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+12 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+11 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+9 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+9 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+8 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+7 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+7 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+6 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+4 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+3 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+
+# With PCA
+High correlation feature set
+Acc: 0.81 | Prec: 0.39 | Recall: 0.41 | F1: 0.40 | F2: 0.41
+### GridSearchCV Best Parameters
+10 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+8 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+7 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+7 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+6 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+5 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+4 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+4 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+4 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+4 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+3 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+3 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+3 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+2 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+2 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+2 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+
+All orginal features
+Acc: 0.82 | Prec: 0.32 | Recall: 0.29 | F1: 0.31 | F2: 0.30
+### GridSearchCV Best Parameters
+14 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+14 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+12 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+12 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+11 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+7 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+7 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+5 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+4 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+3 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+2 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+
+All featurs + news
+Acc: 0.80 | Prec: 0.26 | Recall: 0.25 | F1: 0.25 | F2: 0.25
+### GridSearchCV Best Parameters
+8 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+7 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+7 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+6 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+6 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+6 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+5 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+5 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+5 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+4 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+4 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+4 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+3 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+3 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+2 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+
+# With SelectKbest
+High correlation feature set
+Acc: 0.82 | Prec: 0.39 | Recall: 0.32 | F1: 0.35 | F2: 0.33
+### GridSearchCV Best Parameters
+7 {"kbest__k": 3, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+7 {"kbest__k": 3, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+6 {"kbest__k": 3, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+6 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+6 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+5 {"kbest__k": 3, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+5 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+5 {"kbest__k": 3, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+5 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+4 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+4 {"kbest__k": 3, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+4 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+3 {"kbest__k": 3, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+3 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+3 {"kbest__k": 3, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+2 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+2 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+2 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+2 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+2 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+2 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+2 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__splitter": "best"}
+2 {"kbest__k": 3, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+1 {"kbest__k": 3, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__splitter": "best"}
+1 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+1 {"kbest__k": 3, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__splitter": "best"}
+1 {"kbest__k": 3, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__splitter": "best"}
+
+All orginal features
+Acc: 0.81 | Prec: 0.25 | Recall: 0.23 | F1: 0.24 | F2: 0.23
+### GridSearchCV Best Parameters
+11 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+10 {"kbest__k": 8, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+6 {"kbest__k": 16, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+5 {"kbest__k": 12, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+5 {"kbest__k": 6, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+5 {"kbest__k": 6, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+4 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+4 {"kbest__k": 10, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+3 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+3 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+3 {"kbest__k": 14, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+3 {"kbest__k": 10, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+3 {"kbest__k": 8, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+3 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+2 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+2 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+2 {"kbest__k": 10, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+2 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+2 {"kbest__k": 8, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+2 {"kbest__k": 8, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+2 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+2 {"kbest__k": 18, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+1 {"kbest__k": 10, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+1 {"kbest__k": 6, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+1 {"kbest__k": 16, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"kbest__k": 10, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"kbest__k": 14, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"kbest__k": 16, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+1 {"kbest__k": 12, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+1 {"kbest__k": 8, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+1 {"kbest__k": 6, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"kbest__k": 12, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+1 {"kbest__k": 18, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"kbest__k": 10, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"kbest__k": 18, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__splitter": "best"}
+1 {"kbest__k": 12, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 10, "tree__splitter": "best"}
+1 {"kbest__k": 14, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 8, "tree__splitter": "best"}
+
+All featurs + news
+
+
+
+
+
+
+
+
+### Random Forest ###
+
+# Stand-alone
+High correlation feature set
+Acc: 0.84 | Prec: 0.47 | Recall: 0.28 | F1: 0.35 | F2: 0.31
+### GridSearchCV Best Parameters
+14 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 5}
+9 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 5}
+8 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 5}
+8 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 5}
+7 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 10}
+6 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 5}
+6 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 15}
+5 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 10}
+4 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 15}
+3 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 15}
+3 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 5}
+3 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 10}
+3 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 5}
+3 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 10}
+2 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 5}
+2 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 15}
+2 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 5}
+2 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 5}
+1 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 5}
+1 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 15}
+1 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 15}
+1 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 15}
+1 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 10}
+1 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 10}
+1 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 5}
+1 {"tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 10}
+1 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 10}
+1 {"tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 15}
+
+All orginal features
+Acc: 0.85 | Prec: 0.32 | Recall: 0.14 | F1: 0.20 | F2: 0.16
+### GridSearchCV Best Parameters
+22 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+19 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+17 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+11 {"tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+10 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+8 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+7 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+6 {"tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+
+All featurs + news
+
+# With PCA
+High correlation feature set
+Acc: 0.85 | Prec: 0.50 | Recall: 0.38 | F1: 0.43 | F2: 0.39
+### GridSearchCV Best Parameters
+6 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 6}
+5 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 3}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 9}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 9}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 3}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 6}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 6}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 3}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+3 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 3}
+3 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 9}
+3 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+3 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 9}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 9}
+2 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 3}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 3}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 6}
+2 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 9}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 3}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 9}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 3}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 3}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 6}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 9}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 6}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 3}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 9}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 9}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 9}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 6}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 3}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 3}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 3}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 9}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 6}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 9}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 9}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 3}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 6}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 6}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 3}
+
+All orginal features
+Acc: 0.84 | Prec: 0.30 | Recall: 0.14 | F1: 0.19 | F2: 0.16
+### GridSearchCV Best Parameters
+10 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+9 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+8 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+8 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+7 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+7 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+7 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+6 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+6 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+5 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+4 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+4 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+2 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+2 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+1 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+
+All featurs + news
+
+# With SelectKbest
+High correlation feature set
+Acc: 0.83 | Prec: 0.43 | Recall: 0.33 | F1: 0.37 | F2: 0.35
+### GridSearchCV Best Parameters
+5 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 3}
+5 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+5 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+4 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 3}
+4 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+4 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 3}
+3 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 6}
+3 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 9}
+3 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+3 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 6}
+3 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 6}
+3 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 3}
+3 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+3 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 6}
+3 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 6}
+3 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 3}
+3 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 6}
+3 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 3}
+3 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 3}
+2 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 6}
+2 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 3}
+2 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 3}
+2 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 3}
+2 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 6}
+2 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 3}
+2 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 3}
+2 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 3}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 6}
+1 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 6}
+1 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 3}
+1 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 6}
+1 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 6}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+1 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 9}
+1 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 6}
+1 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 9}
+1 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 3}
+1 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 3, "tree__n_estimators": 6}
+1 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": "auto", "tree__min_samples_split": 3, "tree__n_estimators": 3}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 9}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 7, "tree__n_estimators": 9}
+1 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 7, "tree__n_estimators": 6}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 9}
+1 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": "auto", "tree__min_samples_split": 5, "tree__n_estimators": 9}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 5, "tree__n_estimators": 9}
+
+All orginal features
+Acc: 0.84 | Prec: 0.34 | Recall: 0.19 | F1: 0.24 | F2: 0.21
+### GridSearchCV Best Parameters
+7 {"kbest__k": 6, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+5 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+5 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+5 {"kbest__k": 6, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+5 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+4 {"kbest__k": 12, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+4 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+4 {"kbest__k": 8, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+3 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+3 {"kbest__k": 18, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+3 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+3 {"kbest__k": 12, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+3 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+3 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+2 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+2 {"kbest__k": 6, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+2 {"kbest__k": 4, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+2 {"kbest__k": 18, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+2 {"kbest__k": 10, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+2 {"kbest__k": 18, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+2 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+2 {"kbest__k": 8, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+2 {"kbest__k": 8, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+2 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+2 {"kbest__k": 6, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+2 {"kbest__k": 10, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+2 {"kbest__k": 4, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+1 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+1 {"kbest__k": 18, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+1 {"kbest__k": 6, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+1 {"kbest__k": 2, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+1 {"kbest__k": 6, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+1 {"kbest__k": 6, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+1 {"kbest__k": 14, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+1 {"kbest__k": 16, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+1 {"kbest__k": 12, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+1 {"kbest__k": 6, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+1 {"kbest__k": 14, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+1 {"kbest__k": 10, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+1 {"kbest__k": 2, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+1 {"kbest__k": 8, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 4}
+1 {"kbest__k": 14, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 4, "tree__n_estimators": 6}
+1 {"kbest__k": 10, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 6}
+1 {"kbest__k": 18, "tree__criterion": "entropy", "tree__max_features": null, "tree__min_samples_split": 2, "tree__n_estimators": 4}
+
+All featurs + news
+
+
+
+
+
+
+
+
+### SVM ###
+High correlation feature set
+
+All orginal features
+
+All featurs + news
+
+# Stand-alone
+High correlation feature set
+
+All orginal features
+
+All featurs + news
+
+# With PCA
+High correlation feature set
+
+All orginal features
+
+All featurs + news
+
+# With PCA and Scaling
+High correlation feature set
+Acc: 0.87 | Prec: 0.89 | Recall: 0.21 | F1: 0.34 | F2: 0.25
+### GridSearchCV Best Parameters
+77 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__kernel": "rbf"}
+19 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__kernel": "rbf"}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__kernel": "sigmoid"}
+
+Acc: 0.80 | Prec: 0.25 | Recall: 0.17 | F1: 0.20 | F2: 0.18
+### GridSearchCV Best Parameters
+28 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+10 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 10, "svm__kernel": "rbf"}
+8 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+8 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 10, "svm__kernel": "rbf"}
+7 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "rbf"}
+7 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+6 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "rbf"}
+4 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "sigmoid"}
+3 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 10, "svm__kernel": "rbf"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 10, "svm__kernel": "sigmoid"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "sigmoid"}
+3 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "sigmoid"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "rbf"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "rbf"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+1 {"pca__n_components": 6, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "sigmoid"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 500, "svm__degree": 3, "svm__gamma": 10, "svm__kernel": "sigmoid"}
+
+Acc: 0.76 | Prec: 0.24 | Recall: 0.24 | F1: 0.24 | F2: 0.24
+### GridSearchCV Best Parameters
+100 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1.5, "svm__kernel": "sigmoid"}
+
+Acc: 0.81 | Prec: 0.21 | Recall: 0.16 | F1: 0.18 | F2: 0.17
+### GridSearchCV Best Parameters
+16 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+15 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+12 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+10 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+9 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+9 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+6 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+5 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+3 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "rbf"}
+2 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "poly"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "poly"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "rbf"}
+
+All orginal features
+
+All featurs + news
+Acc: 0.81 | Prec: 0.21 | Recall: 0.16 | F1: 0.18 | F2: 0.17
+### GridSearchCV Best Parameters
+16 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+15 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+12 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+10 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+9 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+9 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+6 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+5 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+3 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+3 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "rbf"}
+2 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+2 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "poly"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "poly"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "rbf"}
+
+# With PCA, Scaling, and SelectKBest
+High correlation feature set
+
+All orginal features
+
+All featurs + news
+
+# With Scaling
+High correlation feature set
+Acc: 0.81 | Prec: 0.29 | Recall: 0.15 | F1: 0.20 | F2: 0.17
+### GridSearchCV Best Parameters
+44 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "sigmoid"}
+19 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "sigmoid"}
+17 {"svm__C": 100, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "sigmoid"}
+5 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.2, "svm__kernel": "sigmoid"}
+3 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.2, "svm__kernel": "rbf"}
+3 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "rbf"}
+3 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "rbf"}
+1 {"svm__C": 50, "svm__degree": 4, "svm__gamma": 0.9, "svm__kernel": "poly"}
+1 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.1, "svm__kernel": "rbf"}
+1 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.1, "svm__kernel": "rbf"}
+1 {"svm__C": 100, "svm__degree": 3, "svm__gamma": 0.1, "svm__kernel": "rbf"}
+1 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "poly"}
+1 {"svm__C": 100, "svm__degree": 3, "svm__gamma": 0.2, "svm__kernel": "sigmoid"}
+
+Acc: 0.82 | Prec: 0.34 | Recall: 0.18 | F1: 0.24 | F2: 0.20
+### GridSearchCV Best Parameters
+33 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "sigmoid"}
+16 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "sigmoid"}
+11 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.5, "svm__kernel": "sigmoid"}
+11 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.5, "svm__kernel": "sigmoid"}
+10 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.5, "svm__kernel": "sigmoid"}
+9 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "sigmoid"}
+2 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.5, "svm__kernel": "rbf"}
+2 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.2, "svm__kernel": "sigmoid"}
+2 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "rbf"}
+1 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.9, "svm__kernel": "rbf"}
+1 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.2, "svm__kernel": "sigmoid"}
+1 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.2, "svm__kernel": "rbf"}
+1 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.5, "svm__kernel": "rbf"}
+
+Acc: 0.81 | Prec: 0.33 | Recall: 0.21 | F1: 0.26 | F2: 0.23
+### GridSearchCV Best Parameters
+21 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.7, "svm__kernel": "sigmoid"}
+20 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "sigmoid"}
+14 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.8, "svm__kernel": "sigmoid"}
+12 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "sigmoid"}
+11 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "sigmoid"}
+7 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.7, "svm__kernel": "sigmoid"}
+6 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.7, "svm__kernel": "sigmoid"}
+3 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.8, "svm__kernel": "sigmoid"}
+2 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.7, "svm__kernel": "rbf"}
+1 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.7, "svm__kernel": "rbf"}
+1 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "rbf"}
+1 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "rbf"}
+1 {"svm__C": 50, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "rbf"}
+
+Acc: 0.79 | Prec: 0.28 | Recall: 0.23 | F1: 0.25 | F2: 0.23
+### GridSearchCV Best Parameters
+36 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+25 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.7, "svm__kernel": "sigmoid"}
+22 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "sigmoid"}
+17 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.8, "svm__kernel": "sigmoid"}
+
+Acc: 0.79 | Prec: 0.27 | Recall: 0.23 | F1: 0.25 | F2: 0.23
+### GridSearchCV Best Parameters
+36 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 10, "svm__kernel": "sigmoid"}
+22 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+18 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "sigmoid"}
+13 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.7, "svm__kernel": "sigmoid"}
+11 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.8, "svm__kernel": "sigmoid"}
+
+Acc: 0.78 | Prec: 0.26 | Recall: 0.23 | F1: 0.24 | F2: 0.23
+### GridSearchCV Best Parameters
+23 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "sigmoid"}
+19 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 10, "svm__kernel": "sigmoid"}
+16 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+15 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.99, "svm__kernel": "sigmoid"}
+10 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.8, "svm__kernel": "sigmoid"}
+9 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 0.7, "svm__kernel": "sigmoid"}
+4 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 15, "svm__kernel": "sigmoid"}
+4 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 20, "svm__kernel": "sigmoid"}
+
+Acc: 0.79 | Prec: 0.33 | Recall: 0.34 | F1: 0.33 | F2: 0.33
+### GridSearchCV Best Parameters
+100 {"svm__C": 500, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "sigmoid"}
+
+Acc: 0.79 | Prec: 0.34 | Recall: 0.34 | F1: 0.34 | F2: 0.34
+### GridSearchCV Best Parameters
+100 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 5, "svm__kernel": "sigmoid"}
+
+All orginal features
+Acc: 0.81 | Prec: 0.26 | Recall: 0.24 | F1: 0.25 | F2: 0.24
+### GridSearchCV Best Parameters
+46 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+39 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+9 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+3 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+2 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+1 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "rbf"}
+
+All featurs + news
+
+# With Scaling and SelectKest
+High correlation feature set
+Acc: 0.78 | Prec: 0.22 | Recall: 0.18 | F1: 0.20 | F2: 0.19
+### GridSearchCV Best Parameters
+25 {"kbest__k": 4, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+22 {"kbest__k": 2, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+18 {"kbest__k": 4, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+12 {"kbest__k": 4, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+11 {"kbest__k": 2, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+6 {"kbest__k": 2, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+3 {"kbest__k": 4, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+1 {"kbest__k": 4, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "rbf"}
+1 {"kbest__k": 4, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+1 {"kbest__k": 2, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+
+All orginal features
+Acc: 0.80 | Prec: 0.23 | Recall: 0.23 | F1: 0.23 | F2: 0.23
+### GridSearchCV Best Parameters
+10 {"kbest__k": 11, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "poly"}
+8 {"kbest__k": 8, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "poly"}
+8 {"kbest__k": 8, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+7 {"kbest__k": 17, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+7 {"kbest__k": 11, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+6 {"kbest__k": 11, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+6 {"kbest__k": 5, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+6 {"kbest__k": 14, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+5 {"kbest__k": 5, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "poly"}
+4 {"kbest__k": 8, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "poly"}
+3 {"kbest__k": 5, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+3 {"kbest__k": 8, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+3 {"kbest__k": 5, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "poly"}
+3 {"kbest__k": 11, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "poly"}
+3 {"kbest__k": 14, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+2 {"kbest__k": 2, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+2 {"kbest__k": 17, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+2 {"kbest__k": 8, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+2 {"kbest__k": 8, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "sigmoid"}
+2 {"kbest__k": 17, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+1 {"kbest__k": 5, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+1 {"kbest__k": 5, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+1 {"kbest__k": 11, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+1 {"kbest__k": 5, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+1 {"kbest__k": 14, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+1 {"kbest__k": 2, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+1 {"kbest__k": 14, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "poly"}
+1 {"kbest__k": 11, "svm__C": 1000, "svm__degree": 3, "svm__gamma": 3, "svm__kernel": "rbf"}
+
+All featurs + news
+Acc: 0.79 | Prec: 0.19 | Recall: 0.17 | F1: 0.18 | F2: 0.17
+### GridSearchCV Best Parameters
+48 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "sigmoid"}
+33 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "poly"}
+15 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 1, "svm__kernel": "rbf"}
+3 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "sigmoid"}
+1 {"svm__C": 1000, "svm__degree": 3, "svm__gamma": 2, "svm__kernel": "rbf"}
+
+# With SelectKbest
+High correlation feature set
+
+All orginal features
+
+All featurs + news
+
+
+
+
+
+
+
+
+### KMeans ###
+
+# Stand-alone
+High correlation feature set
+cc: 0.82 | Prec: 0.28 | Recall: 0.13 | F1: 0.18 | F2: 0.15
+### GridSearchCV Best Parameters
+100 {"kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+All orginal features
+Acc: 0.83 | Prec: 0.25 | Recall: 0.13 | F1: 0.17 | F2: 0.14
+### GridSearchCV Best Parameters
+100 {"kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+All featurs + news
+Acc: 0.83 | Prec: 0.25 | Recall: 0.13 | F1: 0.17 | F2: 0.14
+### GridSearchCV Best Parameters
+100 {"kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+# With PCA
+High correlation feature set
+Acc: 0.82 | Prec: 0.30 | Recall: 0.12 | F1: 0.17 | F2: 0.14
+### GridSearchCV Best Parameters
+99 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+1 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false}
+
+All orginal features
+Acc: 0.85 | Prec: 0.32 | Recall: 0.12 | F1: 0.17 | F2: 0.14
+### GridSearchCV Best Parameters
+91 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+7 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false}
+2 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false}
+
+All featurs + news
+Acc: 0.85 | Prec: 0.32 | Recall: 0.12 | F1: 0.17 | F2: 0.14
+### GridSearchCV Best Parameters
+91 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+7 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false}
+2 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false}
+
+# With PCA and Scaling
+High correlation feature set
+Acc: 0.71 | Prec: 0.18 | Recall: 0.26 | F1: 0.21 | F2: 0.24
+### GridSearchCV Best Parameters
+63 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false}
+37 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+
+All orginal features
+Acc: 0.83 | Prec: 0.30 | Recall: 0.19 | F1: 0.23 | F2: 0.21
+### GridSearchCV Best Parameters
+55 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+31 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false}
+14 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false}
+
+All featurs + news
+Acc: 0.83 | Prec: 0.30 | Recall: 0.19 | F1: 0.23 | F2: 0.21
+### GridSearchCV Best Parameters
+55 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false}
+31 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false}
+14 {"kmeans__n_clusters": 2, "kmeans__random_state": 42, "pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false}
+
+# With Scaling
+High correlation feature set
+Acc: 0.70 | Prec: 0.19 | Recall: 0.28 | F1: 0.23 | F2: 0.26
+### GridSearchCV Best Parameters
+100 {"kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+All orginal features
+Acc: 0.52 | Prec: 0.15 | Recall: 0.55 | F1: 0.23 | F2: 0.36
+### GridSearchCV Best Parameters
+100 {"kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+All featurs + news
+cc: 0.50 | Prec: 0.13 | Recall: 0.51 | F1: 0.21 | F2: 0.33
+### GridSearchCV Best Parameters
+100 {"kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+
+# With Scaling and SelectKest
+High correlation feature set
+Acc: 0.62 | Prec: 0.16 | Recall: 0.35 | F1: 0.22 | F2: 0.28
+### GridSearchCV Best Parameters
+60 {"kbest__k": 2, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+40 {"kbest__k": 4, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+All orginal features
+Acc: 0.59 | Prec: 0.15 | Recall: 0.44 | F1: 0.22 | F2: 0.32
+### GridSearchCV Best Parameters
+35 {"kbest__k": 17, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+22 {"kbest__k": 14, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+13 {"kbest__k": 8, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+12 {"kbest__k": 5, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+12 {"kbest__k": 11, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+6 {"kbest__k": 2, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+All featurs + news
+
+Acc: 0.58 | Prec: 0.17 | Recall: 0.56 | F1: 0.26 | F2: 0.39
+### GridSearchCV Best Parameters
+21 {"kbest__k": 17, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+20 {"kbest__k": 14, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+20 {"kbest__k": 11, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+14 {"kbest__k": 5, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+10 {"kbest__k": 20, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+8 {"kbest__k": 8, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+7 {"kbest__k": 2, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+# With SelectKbest
+High correlation feature set
+Acc: 0.78 | Prec: 0.28 | Recall: 0.24 | F1: 0.26 | F2: 0.25
+### GridSearchCV Best Parameters
+81 {"kbest__k": 2, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+19 {"kbest__k": 4, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+All orginal features
+Acc: 0.81 | Prec: 0.28 | Recall: 0.27 | F1: 0.27 | F2: 0.27
+### GridSearchCV Best Parameters
+57 {"kbest__k": 2, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+25 {"kbest__k": 5, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+6 {"kbest__k": 8, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+5 {"kbest__k": 14, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+4 {"kbest__k": 17, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+3 {"kbest__k": 11, "kmeans__n_clusters": 2, "kmeans__random_state": 42}
+
+All featurs + news
+
+
+
+
+
+Good ones
+Decision Tree + PCA
+GridSearchCV(cv=None, error_score='raise',
+       estimator=Pipeline(steps=[('pca', RandomizedPCA(copy=True, iterated_power=3, n_components=None,
+       random_state=None, whiten=False)), ('tree', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=None, splitter='best'))]),
+       fit_params={}, iid=True, n_jobs=1,
+       param_grid={'tree__criterion': ['gini'], 'tree__splitter': ['best'], 'tree__min_samples_split': [9], 'pca__n_components': [2], 'pca__whiten': [False], 'tree__max_features': [None], 'pca__random_state': [42]},
+       pre_dispatch='2*n_jobs', refit=True, scoring='recall', verbose=0)
+    Accuracy: 0.83677   Precision: 0.46938  Recall: 0.46750 F1: 0.46844 F2: 0.46787
+    Total predictions: 13000    True positives:  935    False positives: 1057   False negatives: 1065   True negatives: 9943
+
+{"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_features": null, "tree__min_samples_split": 9, "tree__splitter": "best"} 1000
+[Finished in 22.5s]
+
+Acc: 0.83 | Prec: 0.43 | Recall: 0.34 | F1: 0.38 | F2: 0.36
+### GridSearchCV Best Parameters
+43 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": null, "tree__min_samples_leaf": 1, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+13 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": null, "tree__min_samples_leaf": 1, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+10 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": null, "tree__min_samples_leaf": 3, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+7 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": null, "tree__min_samples_leaf": 1, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+6 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": null, "tree__min_samples_leaf": 3, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+6 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": 10, "tree__min_samples_leaf": 1, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+3 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": 5, "tree__min_samples_leaf": 3, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+2 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": 5, "tree__min_samples_leaf": 1, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": 5, "tree__max_features": null, "tree__max_leaf_nodes": null, "tree__min_samples_leaf": 3, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+2 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": 10, "tree__min_samples_leaf": 3, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": 5, "tree__max_features": null, "tree__max_leaf_nodes": 10, "tree__min_samples_leaf": 3, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": 5, "tree__max_features": null, "tree__max_leaf_nodes": 10, "tree__min_samples_leaf": 1, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+1 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": null, "tree__max_features": null, "tree__max_leaf_nodes": 10, "tree__min_samples_leaf": 3, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+1 {"pca__n_components": 4, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": 10, "tree__max_features": null, "tree__max_leaf_nodes": null, "tree__min_samples_leaf": 1, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+1 {"pca__n_components": 2, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": 10, "tree__max_features": null, "tree__max_leaf_nodes": null, "tree__min_samples_leaf": 1, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+1 {"pca__n_components": 3, "pca__random_state": 42, "pca__whiten": false, "tree__criterion": "gini", "tree__max_depth": 5, "tree__max_features": null, "tree__max_leaf_nodes": 10, "tree__min_samples_leaf": 3, "tree__min_samples_split": 9, "tree__presort": true, "tree__splitter": "best"}
+
+GridSearchCV(cv=None, error_score='raise',
+       estimator=Pipeline(steps=[('pca', RandomizedPCA(copy=True, iterated_power=3, n_components=None,
+       random_state=None, whiten=False)), ('tree', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=None, splitter='best'))]),
+       fit_params={}, iid=True, n_jobs=1,
+       param_grid={'tree__criterion': ['gini'], 'tree__splitter': ['best'], 'tree__min_samples_split': [9], 'pca__n_components': [2], 'pca__whiten': [False], 'tree__random_state': [42], 'tree__max_features': [None], 'tree__max_leaf_nodes': [None], 'tree__presort': [True], 'tree__max_depth': [None], 'tree__min_samples_leaf': [1], 'pca__random_state': [42]},
+       pre_dispatch='2*n_jobs', refit=True, scoring='recall', verbose=0)
+    Accuracy: 0.82754   Precision: 0.44265  Recall: 0.46700 F1: 0.45450 F2: 0.46192
+    Total predictions: 13000    True positives:  934    False positives: 1176   False negatives: 1066   True negatives: 9824
+
+high core original features
+    GridSearchCV(cv=None, error_score='raise',
+       estimator=Pipeline(steps=[('pca', RandomizedPCA(copy=True, iterated_power=3, n_components=None,
+       random_state=None, whiten=False)), ('tree', DecisionTreeClassifier(class_weight=None, criterion='gini', max_depth=None,
+            max_features=None, max_leaf_nodes=None, min_samples_leaf=1,
+            min_samples_split=2, min_weight_fraction_leaf=0.0,
+            presort=False, random_state=None, splitter='best'))]),
+       fit_params={}, iid=True, n_jobs=1,
+       param_grid={'tree__criterion': ['gini'], 'tree__splitter': ['best'], 'tree__min_samples_split': [9], 'pca__n_components': [2], 'pca__whiten': [False], 'tree__random_state': [42], 'tree__max_features': [None], 'tree__max_leaf_nodes': [None], 'tree__presort': [True], 'tree__max_depth': [None], 'tree__min_samples_leaf': [1], 'pca__random_state': [42]},
+       pre_dispatch='2*n_jobs', refit=True, scoring='recall', verbose=0)
+    Accuracy: 0.82977   Precision: 0.45026  Recall: 0.48200 F1: 0.46559 F2: 0.47530
+    Total predictions: 13000    True positives:  964    False positives: 1177   False negatives: 1036   True negatives: 9823
